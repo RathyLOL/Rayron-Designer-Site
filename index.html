@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Links - Rayron Designer | Imagens que Impactam</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #13181a;
+      color: #ffffff;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .hero {
+      position: relative;
+      padding: 80px 0 120px; /* mais espaço embaixo para o fade */
+      background: #13181a url('https://lh3.googleusercontent.com/rd-d/ALs6j_GSNYEcrYSexg5hdEsZI78eB_TUkQps4jsA3CgSyDC0DLHdLtZN0Hxf1bZ6GmkyL9Ka3tGgnD-I7OVI5vwi8V8j2d9oRU9brfqS5RJiAm09AfO8roibrOsRkXZ_eH4jOHH-VA2iH77D9r7grh7myLrQDISLX7tmxp-VbcodEPizXYlk0M8k74lBkIjsmTIKzUM0y32vv5kJqLoqcieYY1PlATsZ-LvF_Px6U7HXqAR5DPzzTqvZu_d-LKrB36mTs0iRNXSKTx0_D5ZWVksaQnRhPh2OA2CsqTuviE2Emm0_6MXkdKkyOuHcx2_efcGEUOSXNkquIxwyQfZgAmYhMe6UjmOf1InP5bQFTI_z4mlM1lEcTJajbZQnOjSketZDyRqt9QwwCdOubWg6v59wkVQwpDDukVr5X_9OEz7te2EMmb7wvukI0f5MHEjTc_T4vlNEfai84wKJHepk-r682_v7HZfzdoBTQhWOoso30uvqOM6PPUveiIn48htiuiWKSmmXxQ_H6wPGfd8ACQ0Sm3orhoFM1t-PBnBm_PuGszrj_-In09roy_Ief8zRfZ9LvaD5xhyEmBaDCC4jErlXDUWyUvs2KejjhdiNxaRNywmkXmpHGN4GMCqZnKFQI6SXuHpre_TRDt1H46vWSsxiAIORJL0emnG69z94mhXYbE_aOEsItyYZpPx1TM42yFYVB0a9sFzyZzfe9O9OyF1GonofaDu0RaRKusbxpuRHjMc4yZTVc_Prwh7r_YU3dxdUgk2UlVVkWR_2NSivDnixESx8wUuoDnr5QDQrveN5je6-E0X3KJHT9zz-dD3vB7t4pGpwgEy6_DdI5kHY_TFjvrWN2u4nZfIq56QicYASVy7Vyo3OGlXCn7cnY5aNFVgaFX4b-wHEuheJffVUQl5RxBW9VPUDkdf38iWmJMpyHPkMzO8iibcxJRsO6veYROYBB3nUgtn6UZsvHSGwS7Fls6sG5DkXiVEZ1OALO7SXGJ573cpa9uwiF5WHwqtKQSjUB_zgyjwvl4UniYZSJfzPxbKEmrWF3l78N9YAtlQB9g=s16383-w1000?authuser=0') center/cover no-repeat;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(19,24,26,0) 0%, rgba(19,24,26,0.4) 50%, #13181a 85%);
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero img.main {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #c53237;
+      box-shadow: 0 10px 40px rgba(197,50,55,0.35);
+      margin-bottom: 24px;
+      backdrop-filter: blur(2px); /* blur leve na borda da foto se quiser */
+      background: rgba(0,0,0,0.2); /* ajuda no contraste */
+    }
+
+    /* Se quiser blur mais forte no fundo visível atrás da foto */
+    .hero img.main::after {
+      content: "";
+      position: absolute;
+      inset: -20px;
+      background: inherit;
+      background-size: cover;
+      filter: blur(12px);
+      z-index: -1;
+      border-radius: 50%;
+      opacity: 0.6;
+    }
+
+    h1 {
+      font-size: 2.6rem;
+      font-weight: 900;
+      margin-bottom: 12px;
+      letter-spacing: -1px;
+      text-shadow: 0 2px 10px rgba(197,50,55,0.4);
+    }
+
+    h2.subtitle {
+      font-size: 1.35rem;
+      font-weight: 600;
+      opacity: 0.92;
+      margin-bottom: 8px;
+    }
+
+    h2.alunos {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin: 16px 0 48px;
+    }
+
+    .dest {
+      color: #c53237;
+      font-weight: 900;
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin: 40px 0 60px;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      background: #1e2528;
+      border: 1px solid #3a444a;
+      border-radius: 999px;
+      padding: 18px 28px;
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 1.18rem;
+      font-weight: 700;
+      transition: all 0.28s ease;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.35);
+      position: relative;
+      overflow: hidden;
+      z-index: 2;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      background: #252c30;
+      border-color: #c53237;
+      box-shadow: 0 12px 40px rgba(197,50,55,0.28);
+    }
+
+    .btn.pisca::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, transparent, rgba(197,50,55,0.18), transparent);
+      animation: shine 3.2s infinite;
+    }
+
+    @keyframes shine {
+      0%   { transform: translateX(-120%); }
+      20%  { transform: translateX(120%); }
+      100% { transform: translateX(120%); }
+    }
+
+    .btn svg {
+      width: 38px;
+      height: 38px;
+      flex-shrink: 0;
+      fill: #ffffff;
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      font-weight: 900;
+      margin: 60px 0 32px;
+      color: #c53237;
+    }
+
+    .footer {
+      margin-top: 100px;
+      font-size: 0.95rem;
+      opacity: 0.6;
+      padding-bottom: 60px;
+      color: #b0b7bd;
+    }
+
+    @media (max-width: 500px) {
+      .hero { padding: 60px 0 100px; }
+      h1 { font-size: 2.2rem; }
+      .btn { padding: 16px 24px; font-size: 1.1rem; }
+      .btn svg { width: 34px; height: 34px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <div class="hero">
+    <div class="hero-content">
+      <img class="main" src="image (5).webp" alt="Rayron Designer">
+
+      <h1><span class="dest">Rayron Designer</span></h1>
+      <h2 class="subtitle">Expert em Criações com Digitais</h2>
+      <h2 class="alunos">+2 Anos no Mercado</h2>
+    </div>
+  </div>
+
+  <div class="buttons">
+    
+    <a class="btn pisca" href="https://www.instagram.com/rayrondesigner/" target="_blank">
+      <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.245.076 2.863.072 7.223.014 8.503 0 8.911 0 12.17c0 3.26.014 3.667.072 4.947.004 4.36 2.623 6.978 6.981 7.151 1.28.058 1.688.072 4.947.072 3.26 0 3.667-.014 4.947-.072 4.358-.173 6.977-2.791 6.981-7.151.058-1.28.072-1.688.072-4.947 0-3.259-.014-3.667-.072-4.947-.004-4.36-2.623-6.978-6.981-7.151C16.667.014 16.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zm0 10.162a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 11-2.88 0 1.44 1.44 0 012.88 0z"/></svg>
+      Instagram
+    </a>
+
+    <a class="btn pisca" href="https://api.whatsapp.com/send?phone=5582981738050&text=Oi%20Rayron%20Designer..." target="_blank">
+      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.198-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.297-.497.099-.198.05-.371-.025-.52-.074-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Whatsapp
+    </a>
+
+    <a class="btn pisca" href="https://www.youtube.com/@rayrondesigner" target="_blank">
+      <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.121 2.136c1.872.505 9.377.505 9.377.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+      YouTube
+    </a>
+
+    <a class="btn pisca" href="SEU_LINK_DO_PORTFOLIO_AQUI" target="_blank">
+      <svg viewBox="0 0 24 24" width="38" height="38" fill="#c53237"><path d="M19.43 12.98c.04-.32.07-.64.07-.98s-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.23-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98s.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.23.09.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z"/></svg>
+      Portfólio (Em manuntenção)
+    </a>
+
+  </div>
+
+  <h2 class="section-title">Parcerias</h2>
+
+  <a href="https://www.instagram.com/renecell.assistencia/" target="_blank">
+    <img src="image (3).webp" style="width:100%; border-radius:16px; box-shadow:0 10px 40px rgba(197,50,55,0.25);" alt="Renecell Assistência">
+  </a>
+
+  <div class="footer">
+    Copyright © Rayron Designer | Todos os direitos reservados
+  </div>
+
+</div>
+
+</body>
+</html>
